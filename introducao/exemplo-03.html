@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <input type="text" name="num1" id="num1" placeholder="Digite um número" />
+      <input
+        type="text"
+        name="num2"
+        id="num2"
+        placeholder="Digite outro número"
+      />
+      <button onclick="somar()">Somar</button>
+      <br />
+      <p id="msg"></p>
+    </div>
+    <script>
+      function somar() {
+        let n1 = document.querySelector('input#num1').value
+        let n2 = document.querySelector('input#num2').value
+        let soma = parseFloat(n1) + parseFloat(n2)
+        let sub = parseFloat(n1) - parseFloat(n2)
+        let mult = parseFloat(n1) * parseFloat(n2)
+        let div = parseFloat(n1) / parseFloat(n2)
+        n1 = parseFloat(n1)
+        n2 = parseFloat(n2)
+
+        let msg = document.querySelector('p#msg')
+        msg.innerHTML = `<p> O resultado da soma de ${n1} com ${n2} é ${soma} </p>
+        <p> O resultado da subtração de ${n1} com ${n2} é ${sub} </p>
+        <p> O resultado da multiplicação de ${n1} com ${n2} é ${mult} </p>
+        <p> O resultado da divisão de ${n1} com ${n2} é ${div} </p>
+        `
+      }
+
+      //(`Olá, a soma de ${n1} com ${n2} é ${n1 + n2}`)
+    </script>
+  </body>
+</html>
