@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>ex 01</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h3>Caso o segundo número digitado sejá maior ou igual ao primeiro a resposta será true, caso contrário, será false</h3>
+    </div>
+    <!-- <div>
+      <h1>Digite números de 0 a 10</h1>
+      <input type="text" name="num1" id="num1" placeholder="Digite um número" max="2" maxlength="2"/>
+      <input
+        type="text"
+        name="num2"
+        id="num2"
+        placeholder="Digite outro número"
+        max="2" maxlength="2"/>
+      <button onclick="maior()">Verificar</button>
+      <p>Se o segundo número for maior ou igual ao primerio a resposta será true se não será false</p>
+      <br />
+      <p id="msg"></p> -->
+    </div>
+    <script>
+      let n1 = parseFloat(prompt("digite um número"))
+      let n2 = parseFloat(prompt("digite outro número"))
+      alert(`O segundo número é maior ou igual ao primeiro? ${n2 >= n1}`)
+      /* function maior() {
+        let num1 = parseFloat(document.querySelector('input#num1')).value
+        let num2 = parseFloat(document.querySelector('input#num2')).value
+        let msg = document.querySelector('p#msg')
+
+        if(num2 >= num1) {
+          msg.innerHTML = `true`
+        } else {
+          msg.innerHTML = `false`
+        }
+        num1.value = ""
+        num2.value = ""
+      } */
+    </script>
+  </body>
+</html>
