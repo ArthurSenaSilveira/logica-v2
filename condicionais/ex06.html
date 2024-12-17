@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      input {
+        width: 160px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Qual o valor digitado?</h1>
+      <input type="text" id="num" placeholder="Digite qualquer valor"/>
+
+      <button onclick="verificar()">Verificar</button>
+
+      <p id="res"></p>
+    </div>
+
+    <script>
+      let valor = 0
+
+      switch (typeof valor) {
+        case "number": 
+          console.log("Número")
+          break
+        case "string": 
+          console.log("Texto")
+          break
+        case "boolean": 
+          console.log("Boolean")
+          break
+      }
+      /* function verificar() {
+        let num = document.querySelector('input').value
+        let res = document.querySelector('p')
+
+        if (num === Number){
+          num = Number(num)
+        }
+
+        switch(typeof num) {
+          case "number": 
+            res.innerHTML = `O valor digitado é um número`
+            break
+          case "string": 
+            res.innerHTML = `O valor digitado é uma string`
+            break
+        }
+        document.querySelector('input').value = ''
+      } */
+    </script>
+  </body>
+</html>

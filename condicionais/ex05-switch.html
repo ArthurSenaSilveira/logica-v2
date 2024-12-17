@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      input {
+        width: 160px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Qual o dia da semana?</h1>
+      <h2>Ordem dos dias das semanas:</h2>
+      <h3>
+        Domingo: 0
+        <br />
+        Segunda: 1
+        <br />
+        Terça: 2
+        <br />
+        Quarta: 3
+        <br />
+        Quinta: 4
+        <br />
+        Sexta: 5
+        <br />
+        Sabado: 6
+      </h3>
+      <input type="text" id="num" placeholder="Digite um número de 0 a 6" />
+
+      <button onclick="verificar()">Verificar</button>
+
+      <p id="res"></p>
+    </div>
+
+    <script>
+      function verificar() {
+        let num = document.querySelector('input').value
+        let res = document.querySelector('p')
+
+        switch (num) {
+          case '0':
+            res.innerHTML = `O valor digitado, corresponde ao seguinte dia da semana: Domingo`
+            break
+          case '1':
+            res.innerHTML = `O valor digitado, corresponde ao seguinte dia da semana: Segunda-Feira`
+            break
+          case '2':
+            res.innerHTML = `O valor digitado, corresponde ao seguinte dia da semana: Terça-Feira`
+            break
+          case '3':
+            res.innerHTML = `O valor digitado, corresponde ao seguinte dia da semana: Quarta-Feira`
+            break
+          case '4':
+            res.innerHTML = `O valor digitado, corresponde ao seguinte dia da semana: Quinta-Feira`
+            break
+          case '5':
+            res.innerHTML = `O valor digitado, corresponde ao seguinte dia da semana: Sexta-Feira`
+            break
+          case '6':
+            res.innerHTML = `O valor digitado, corresponde ao seguinte dia da semana: Sabado`
+            break
+          default:
+            res.innerHTML = `O valor digitado não está entre 0 e 6, tente novamente!`
+        }
+        document.querySelector('input').value = ''
+      }
+    </script>
+  </body>
+</html>
