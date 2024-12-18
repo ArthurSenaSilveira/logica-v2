@@ -22,7 +22,7 @@
     </div>
 
     <script>
-      let valor = 0
+      /* let valor = 0
 
       switch (typeof valor) {
         case "number": 
@@ -34,14 +34,10 @@
         case "boolean": 
           console.log("Boolean")
           break
-      }
-      /* function verificar() {
+      } */
+      function verificar() {
         let num = document.querySelector('input').value
         let res = document.querySelector('p')
-
-        if (num === Number){
-          num = Number(num)
-        }
 
         switch(typeof num) {
           case "number": 
@@ -50,9 +46,30 @@
           case "string": 
             res.innerHTML = `O valor digitado é uma string`
             break
+          case "boolean": 
+            res.innerHTML = `O valor digitado é uma boleana`
+            break
+          case "undefined": 
+            res.innerHTML = `O valor digitado é um undefined`
+            break
+          case "function": 
+            res.innerHTML = `O valor digitado é uma função`
+            break
+          case "object": 
+            res.innerHTML = `O valor digitado é um objeto`
+            break
+          case "bigint": 
+            res.innerHTML = `O valor digitado é uma bigint`
+            break
+          case "symbol": 
+            res.innerHTML = `O valor digitado é um simbolo`
+            break
+          default:
+            res.innerHTML = `O valor digitado não foi encontrado`
+            break
         }
         document.querySelector('input').value = ''
-      } */
+      }
     </script>
   </body>
 </html>
