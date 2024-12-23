@@ -32,6 +32,9 @@ p {
     margin: 5px;
     padding: 5px;
 }
+hr{
+    background-color: black;
+}
 @media screen and (min-width: 668px) {
     div {
         width: 330px;

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>desafio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Digite um número</h1>
+      <input type="number" name="num" id="num" placeholder="Digite aqui" />
+      <button onclick="verificar()">Resultado</button>
+      <p class="res"></p>
+    </div>
+
+    <script>
+      let num = Number(document.querySelector('input#num').value)
+      let res = document.querySelector('p.res')
+
+      function verificar() {
+        res.innerHTML = `A sequencia de 2 até ${num} é: <br>`
+        
+        for (let i = 2; i <= num; i += 2) {
+          res.innerHTML += `${i}<br>`
+        }
+      }
+      res.innerHTML = ''
+
+            /* let num = Number(prompt(`Digite um número`))
+            let i = 2 */
+            /* do {
+                alert(`${i}`)
+            } while (i <= num) {
+                i += 2
+            } */
+            /*  for (let i = 2; i <= num; i += 2) {
+                alert(`${i}`)
+            } */
+    </script>
+  </body>
+</html>

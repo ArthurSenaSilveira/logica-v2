@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ano bisexto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Digite o ano atual</h1>
+      <input type="number" name="num" id="num" placeholder="ano atual" />
+      <button onclick="verificar()">Resultado</button>
+      <p class="res"></p>
+    </div>
+
+    <script>
+      function verificar() {
+        let num = Number(document.querySelector('input#num').value)
+        let res = document.querySelector('p.res')
+        res.innerHTML = `Os anos bissextos do ano 2000 até ${num} são: <br>`
+
+        for (let i = 2000; i <= num; i += 4) {
+            if (i % 100 === 0 && i % 400 !== 0) continue;
+          res.innerHTML += `<hr> ${i} `
+        }
+      }
+    </script>
+  </body>
+</html>
