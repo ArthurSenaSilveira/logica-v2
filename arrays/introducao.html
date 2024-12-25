@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arrays e objetos</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Arrays</h1>
 
-
-
     <script>
-       let nomes = [" Arthur", "guilherme", "Ana Julia", "Edna", "Edivaldo"] // sintaxe literal
+        let nomeDoUsuario = prompt(`Digite seu nome completo`)
+        let idadeDoUsuario = prompt(`Digite sua idade`)
+        let estadoDoUsuario = prompt(`De qual estado você é?`)
 
-       // let nomes = new Array("João", " Maria", " Arthur") // função construtora
+        let usuario = [
+            `Nome: ${nomeDoUsuario} <hr>
+            Idade: ${idadeDoUsuario} <hr>
+            Estado: ${estadoDoUsuario} <hr>`
+        ]
+        document.write(usuario)
 
-       for(let i = 0; i < nomes.length; i++) {
-        document.write(`Nome: ${nomes[i]} <hr>`)
-       }
+      /*   let nomeDoUsuario = prompt(`Digite seu nome`)
+      let nomes = [
+        ' Arthur',
+        'guilherme',
+        'Ana Julia',
+        'Edna',
+        'Edivaldo',
+        'eva',
+        'Hélio'
+      ] // sintaxe literal
+
+      // let nomes = new Array("João", " Maria", " Arthur") // função construtora
+
+      nomes[6] = `${nomeDoUsuario}`
+      for (let i = 0; i < nomes.length; i++) {
+        document.write(`Nome: ${nomes.sort()[i]} <hr>`)
+      }
+      document.write(`Na lista existem ${nomes.length + 1} nomes`) */
     </script>
-</body>
+  </body>
 </html>
