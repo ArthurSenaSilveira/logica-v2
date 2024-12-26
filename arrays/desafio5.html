@@ -11,17 +11,18 @@
 
 
     <script>
-        const minhaArray = [10, 50, 1, 20, 25, 98, 15, 16, 89, 55]
-        let soma = 0
+        const minhaArray = [true]
         
         for(let i = 0; i < minhaArray.length; i++){
             let indice = minhaArray[i]
 
-            soma += indice
+            if(indice === null || NaN || undefinded){
+                alert("No array existe algum 'null', 'NaN' ou 'undefinded'? " + true)
+            } else {
+                alert("No array existe algum 'null', 'NaN' ou 'undefinded'? " + false)
+            }
         }
 
-
-        alert(`A soma de de todos os números da array é: ${soma}`)
     </script>
 </body>
 </html>

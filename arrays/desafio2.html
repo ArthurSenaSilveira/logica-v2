@@ -11,13 +11,18 @@
 
 
     <script>
-        const minhaArray = [10, 50, 1, 20, 25, 98, 15, 16, 89, 55]
+        const minhaArray = [10, 10, 10, 10, 10, 100, NaN, true, "String", "100", undefined, false, null]
+
+        
         let soma = 0
         
         for(let i = 0; i < minhaArray.length; i++){
             let indice = minhaArray[i]
 
-            soma += indice
+            if( typeof indice == "number" && !isNaN(indice)) {
+                soma += Number(indice)
+            }
+
         }
 
 
