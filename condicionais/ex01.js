@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div>
-        <h1>você foi aprovado?</h1>
-        <!-- <input type="text" id="nota1" placeholder="sua primeira nota">
-        
-        <input type="text" id="nota2" placeholder="sua segunda nota">
 
-        <button onclick="verificar()">Verificar</button>
-        
-        <p id="res"></p> -->
-    </div>
-
-    <script>
         let n1 = Number(prompt("digite sua primeira nota"))
 
         let n2 = Number(prompt("digite sua segunda nota"))
@@ -50,6 +30,3 @@
             }
         //}
         */
-    </script>
-</body>
-</html>
