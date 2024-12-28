@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>desafio 1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>desafio 1</h1>
+      <ul>
+        <li>exemplo: exemplo@exemplo.com</li> <hr>
+      </ul>
+    </div>
+
+    <script>
+      let lista = document.querySelector('ul')
+      const minhaArray = [
+        {nome: "Arthur", email: "arthur@exemplo.com"},
+        {nome: "Guilherme", email: "guilherme@exemplo.com"},
+        {nome: "Edivaldo", email: "edivaldo@exemplo.com"},
+        {nome: "Edna", email: "edna@exemplo.com"},
+        {nome: "Ana Julia", email: "anajulia@exemplo.com"}
+      ]
+        for(let i = 0; i < minhaArray.length; i++){
+            lista.innerHTML += `<li>${minhaArray[i].nome}: ${minhaArray[i].email}</li>
+      <hr>`
+        }
+    </script>
+  </body>
+</html>

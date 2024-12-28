@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>desafio 1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>desafio 1</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade em estoque</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+
+
+    <script>
+      let div = document.querySelector('div table tbody')
+      const produtos = [
+      {nome: "Notbook", preco: 5000, estoque: 1},
+      {nome: "Celular", preco: 2000, estoque: 5},
+      {nome: "Tv", preco: 5000, estoque: 1}
+      ]
+      for(let i = 0; i < produtos.length; i++){
+        div.innerHTML += `<tr>
+          <td> ${produtos[i].nome}</td>
+          <td>R$${produtos[i].preco.toFixed(2)}</td>
+          <td>${produtos[i].estoque}</td>
+        </tr>`
+      }
+    </script>
+  </body>
+</html>
