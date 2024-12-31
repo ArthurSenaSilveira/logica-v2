@@ -9,27 +9,41 @@
   <body>
     <div>
       <h2>lista de alunos</h2>
-      <ul>
-        <li id="lista1"></li>
-        <li id="lista2"></li>
-      </ul>
+      <ul id="listaAlunos"></ul>
     </div>
 
     <script>
-      let lista1 = document.querySelector(lista1)
-      let lista2 = document.querySelector(lista2)
+      let listaAlunos = document.getElementById('listaAlunos')
       const alunos = [
         {
-          nome: 'Arthur Sena',
+          nome: 'Arthur',
           notas: [1, 3, 3, 8]
         },
         {
-          nome: 'Sena Arthur',
+          nome: 'Arthur Henrique',
           notas: [10, 6, 3, 2]
+        },
+        {
+          nome: 'Arthur Henrique Sena',
+          notas: [7, 3, 2, 10]
+        },
+        {
+          nome: 'Arthur Henrique Sena Silveira',
+          notas: [9, 6, 5, 7]
         }
       ]
+      let alunohtml = ''
 
-      
+      for (let i = 0; i < alunos.length; i++) {
+        alunohtml += `<li> ${alunos[i].nome}`
+        alunohtml += `<ul>`
+        for (let a = 0; a < alunos[i].notas.length; a++) {
+          alunohtml += `<li>${alunos[i].notas[a]}</li>`
+        }
+        alunohtml += `</ul>`
+        alunohtml += `</li>`
+      }
+      listaAlunos.innerHTML += alunohtml
     </script>
   </body>
 </html>
