@@ -8,15 +8,24 @@ const alunos = [
     notas: [10, 6, 3, 2]
   }
 ]
-let soma = 0
-for(let i = 0; i < alunos[0].notas; i++){
-    soma += i
-}
-let soma2 = 0
-for(let i = 0; i < alunos[1].notas; i++){
-    soma2 += i
+
+
+
+
+/* let soma = 0
+for (let i = 0; i < alunos[0].notas.length; i++) {
+  let indice = alunos[0].notas[i]
+  soma += indice
 }
 let media = soma / alunos[0].notas.length
-let media2 = soma2 / alunos[1].notas.length
-console.log(`O aluno: ${alunos[0].nome} ficou com média: ${media}`)
-console.log(`O aluno: ${alunos[1].nome} ficou com média: ${media2}`)
+console.log(`Nome: ${alunos[0].nome}, média: ${media}`)
+
+
+
+let somaa = 0
+for(let i = 0; i < alunos[1].notas.length; i++){
+  let indice = alunos[1].notas[i]
+  somaa += indice
+}
+let mediaa = somaa / alunos[1].notas.length
+console.log(`Nome: ${alunos[1].nome}, média: ${mediaa}`) */
