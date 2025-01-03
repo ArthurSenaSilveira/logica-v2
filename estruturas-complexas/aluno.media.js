@@ -5,7 +5,19 @@ const alunos = [
   },
   {
     nome: 'Sena Arthur',
-    notas: [10, 6, 3, 2]
+    notas: [10, 6, 10, 10]
+  },
+  {
+    nome: 'G',
+    notas: [10, 6, 1, 0]
+  },
+  {
+    nome: 'E',
+    notas: [5, 9, 1, 6]
+  },
+  {
+    nome: 'ed',
+    notas: [5, 3, 6, 4]
   }
 ]
 
@@ -20,24 +32,3 @@ for (let i = 0; i < alunos.length; i++) {
 
   console.log(`Nome: ${alunos[i].nome}, média: ${media}`)
 }
-
-
-
-// UMA FORMA FÁCIL MAS NÃO RECOMENDADA
-let soma = 0
-for (let i = 0; i < alunos[0].notas.length; i++) {
-  let indice = alunos[0].notas[i]
-  soma += indice
-}
-let media = soma / alunos[0].notas.length
-console.log(`Nome: ${alunos[0].nome}, média: ${media}`)
-
-
-
-let somaa = 0
-for(let i = 0; i < alunos[1].notas.length; i++){
-  let indice = alunos[1].notas[i]
-  somaa += indice
-}
-let mediaa = somaa / alunos[1].notas.length
-console.log(`Nome: ${alunos[1].nome}, média: ${mediaa}`)
