@@ -9,10 +9,22 @@ const alunos = [
   }
 ]
 
+// MELHOR FORMA DE SE FAZER
+for (let i = 0; i < alunos.length; i++) {
+  
+  let soma = 0
+  for(let j = 0; j < alunos[i].notas.length; j++){
+    soma += alunos[i].notas[j]
+  }
+  let media = soma / alunos[i].notas.length
+
+  console.log(`Nome: ${alunos[i].nome}, média: ${media}`)
+}
 
 
 
-/* let soma = 0
+// UMA FORMA FÁCIL MAS NÃO RECOMENDADA
+let soma = 0
 for (let i = 0; i < alunos[0].notas.length; i++) {
   let indice = alunos[0].notas[i]
   soma += indice
@@ -28,4 +40,4 @@ for(let i = 0; i < alunos[1].notas.length; i++){
   somaa += indice
 }
 let mediaa = somaa / alunos[1].notas.length
-console.log(`Nome: ${alunos[1].nome}, média: ${mediaa}`) */
+console.log(`Nome: ${alunos[1].nome}, média: ${mediaa}`)
