@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area de um triangulo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Area do triangulo</h1>
+
+    <input type="number" id="base" placeholder="Base do triangulo">
+    <input type="number" id="altura" placeholder="Altura do triangulo">
+    <button onclick="clicar()">Mostrar</button>
+    <button onclick="limpar()">Limpar</button>
+    <p></p>
+
+    <script>
+        const base = document.querySelector('input#base')
+        const altura = document.querySelector('input#altura')
+        const resultado = document.querySelector('p')
+
+        
+        function clicar() {
+            let baseTriangulo = Number(base.value)
+            let alturaTriangulo = Number(altura.value)
+
+            let area = baseTriangulo * alturaTriangulo / 2
+            
+            limpar()
+            resultado.innerHTML += `A área do triangulo com a altura ${alturaTriangulo} e a base ${baseTriangulo} é: ${area}`
+            
+        }
+        function limpar(){
+            resultado.innerHTML = ""
+            base.value = ""
+            altura.value = ""
+        }
+    </script>
+</body>
+</html>

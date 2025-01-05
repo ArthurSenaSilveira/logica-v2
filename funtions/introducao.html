@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tabuada do 0 ao 10</h1>
+    <input type="number" id="number">
+    <button id="button" onclick="clicar()">Mostrar</button>
+    <button id="limpar" onclick="limpar()">Limpar</button>
+    <p></p>
+
+
+    <script>
+        let button = document.querySelector('button')
+        let resultado = document.querySelector('p')
+        let numero = document.querySelector('input')
+
+        function clicar() {
+            let num = Number(numero.value)
+            if (numero.value === "") {
+                alert(`Digite um número!`)
+            }
+             else {
+                limpar()
+            for(let i = 0; i <= 10; i++){
+                resultado.innerHTML += `<p>${num} x ${i} = ${num * i}</p>`
+            }
+        }
+        
+    }
+    function limpar(){
+        resultado.innerHTML = ""
+        numero.value = ""
+    }
+    </script>
+</body>
+</html>

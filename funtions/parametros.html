@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções com parâmetros</title>
+</head>
+<body>
+    <div>
+        <h1>Funções com parâmetros</h1>
+
+        <input type="number" id="raio" placeholder="Raio do circulo">
+
+        <button onclick="clicar(mostrarAreaDoInput, mostrarAreaDoPrompt)">Mostrar</button>
+
+        <button onclick="limpar()">Limpar</button>
+
+        <p></p>
+    </div>
+
+
+    <script>
+        const raioCirculo  = document.querySelector('input')
+        let resultado = document.querySelector('p')
+
+        function click(a, b){
+            a = prompt(`Digite a área do círculo`)
+            let aValue = Number(a.value)
+
+        }
+    </script>
+</body>
+</html>

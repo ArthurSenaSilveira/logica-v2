@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area do circulo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Calculando a área do curculo</h1>
+        <input type="number" id="raio" placeholder="Raio do circulo">
+        <button onclick="clicar()">Mostrar</button>
+        <button onclick="limpar()">Limpar</button>
+        <p></p>
+    </div>
+
+    <script>
+        const raioCirculo  = document.querySelector('input')
+        let resultado = document.querySelector('p')
+
+        function clicar(){
+            let raio = Number(raioCirculo.value)
+
+            let area = Math.PI * raio ** 2
+
+            limpar()
+            
+            resultado.innerHTML += `A área do circulo com base no raio informado (${raio}) é: ${area}`
+        
+        }
+        function limpar(){
+        resultado.innerHTML = ""
+        raioCirculo.value = ""
+    }
+    </script>
+</body>
+</html>
