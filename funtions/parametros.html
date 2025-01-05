@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Funções com parâmetros</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    button {
+      width: 200px;
+    }
+  </style>
+  <body>
     <div>
-        <h1>Funções com parâmetros</h1>
+      <h1>Funções com parâmetros</h1>
 
-        <input type="number" id="raio" placeholder="Raio do circulo">
+      <input type="number" id="raio" placeholder="Raio do circulo" />
 
-        <button onclick="clicar(mostrarAreaDoInput, mostrarAreaDoPrompt)">Mostrar</button>
+      <button onclick="input()">Calcular a área do input</button>
 
-        <button onclick="limpar()">Limpar</button>
+      <button onclick="Prompt()">Calcular a área do prompt</button>
 
-        <p></p>
+      <button onclick="limpar()">limpar</button>
+
+      <p></p>
     </div>
 
-
     <script>
-        const raioCirculo  = document.querySelector('input')
-        let resultado = document.querySelector('p')
+      const raioCirculo = document.querySelector('input')
+      let resultado = document.querySelector('p')
 
-        function click(a, b){
-            a = prompt(`Digite a área do círculo`)
-            let aValue = Number(a.value)
+      function mostrarArea(raio) {
+        let area = Math.PI * raio ** 2
 
-        }
+        resultado.innerHTML = `A área do circulo com base no raio informado (${raio}) é: ${area}`
+      }
+      function input() {
+        let raioValue = raioCirculo.value
+
+        limpar()
+
+        mostrarArea(raioValue)
+      }
+
+      function Prompt() {
+        let raioValue = parseFloat(prompt(`Digite o raio`))
+
+        limpar()
+        
+        mostrarArea(raioValue)
+      }
+
+      function limpar(){
+        resultado.innerHTML = ""
+        raioCirculo.value = ""
+      }
     </script>
-</body>
+  </body>
 </html>
