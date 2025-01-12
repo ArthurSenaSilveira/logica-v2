@@ -36,35 +36,44 @@
 
       
       function mostrarAreaDoPromptNumAlert() {
-        let meuPrompt = Number(prompt(`Digite o raio`))
+        let raioDig = Number(prompt(`Digite o raio`))
         
-        mostrarAreaAlert(meuPrompt)
+        let msg = mostrarArea(raioDig)
+        alert(msg)
       }
       function mostrarAreaDoPromptNaTela() {
-        let Prompt = Number(prompt(`Digite o raio`))
+        let raioDig = Number(prompt(`Digite o raio`))
         
-        mostrarArea(Prompt)
+        let msg = mostrarArea(raioDig)
+        resultado.innerHTML = `${msg}`
       }
       function mostrarAreaDoInputNumAlert() {
-        let raioDigitado = Number(meuInput.value)
-        
-        mostrarAreaAlert(raioDigitado)
-      }
-      function mostrarAreaDoInputNaAlert() {
+        if(meuInput.value === "" || meuInput.value < 0){
+        alert('Digite um número válido')
+      } else {
         let raioDig = Number(meuInput.value)
         
-        mostrarArea(raioDig)
+        let msg = mostrarArea(raioDig)
+        alert(msg)
       }
+    }
+      function mostrarAreaDoInputNaAlert() {
+        if(meuInput.value === "" || meuInput.value < 0){
+        alert('Digite um número válido')
+      } else {
+        let raioDig = Number(meuInput.value)
+        
+        let msg = mostrarArea(raioDig)
+        resultado.innerHTML = `${msg}`
+      }
+    }
+
+      
       
       function mostrarArea(raio) {
         let area = Math.PI * raio ** 2
     
-        resultado.innerHTML = `A área do circulo com base no raio informado (${raio}) é: ${area}`
-      }
-      function mostrarAreaAlert(raio) {
-        let area = Math.PI * raio ** 2
-    
-        alert(`A área do circulo com base no raio informado (${raio}) é: ${area}`)
+        return `A área do circulo com base no raio informado (${raio}) é: ${area}`
       }
       </script>
   </body>
